@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test ZettaByte</title>
+</head>
+<body>
+    <div class="container">
+		<div>
+			
+			<img src="orang.jpg"  alt="" width="30"  height="30" style="float:left; margin: 8px 4px 0; border-radius: 25px;">
+            <font color="blue">rozzaq</font> posted images
+            <br> 
+             <font color="grey">32 minutes ago</font>
+                
+            
+		</div>
+        <br>
+        <text>sawah yang sangat asri dan indah tanahnya juga subur</text>
+        
+            <img src="sawah.jpg" width="270" height="180" style=" margin: 30px 4px 0;">
+            <br><span style="color: #e25555;">&#9829;</span><font color="grey" size="2">  like (10)</font> 
+		<br>
+		<hr>
+        <font color="grey" size="2">1 comment   ▼</font>
+		<br>
+        <br>
+		<div class="gambar">
+			
+            <img src="komen.jpg" width="30" height="30" style="float:left; margin: 8px 4px 0; border-radius: 25px;">
+            
+            Tera, <font color="grey">21 maret 2020</font>
+            itu sawah yang sangat bagus sekali saya sangat suka kesawah untuk refresing
+            <br>
+            <br>
+            <font color="blue" size="2">Reply</font>
+            
+		</div>
+	</div>
+   
+
+
+<section id="app">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="comment">
+        <p v-for="items in item" v-text="items"></p>
+          </div><!--End Comment-->
+          </div><!--End col -->
+          </div><!-- End row -->
+      <div class="row">
+        <div class="col-6">
+            <img src="orang.jpg"  alt="" width="30"  height="30" style="float:left; margin: 8px 4px 0; border-radius: 25px;">
+            <br><font color="grey">you</font>
+            <textarea type="text" class="input" placeholder="Write a comment" v-model="newItem" @keyup.enter="addItem()"></textarea>
+          <button v-on:click="addItem()" class='primaryContained float-right' type="submit">Add Comment</button>
+        </div><!-- End col -->
+      </div><!--End Row -->
+    </div><!--End Container -->
+  </section><!-- end App -->
+  <style>
+   body {
+  margin: 100px;
+}
+  .container {
+	max-width: 300px;
+	margin:  auto;
+	background: rgb(235, 235, 235);
+	border-radius: 0px;
+	padding: 50px;
+}
+.comment {
+	display: block;
+	transition: all 1s;
+}
+.commentClicked {
+	min-height: 0px;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	padding: 5px 10px
+}
+.container textarea {
+	width: 100%;
+	border: none;
+	background: #E8E8E8;
+	padding: 5px 10px;
+	height: 70%;
+	border-radius: 5px 5px 0px 0px;
+	border-bottom: 2px solid #016BA8;
+	transition: all 0.5s;
+	margin-top: 15px;
+}
+button.primaryContained {
+	background: #016ba8;
+	color: #fff;
+	padding: 10px 10px;
+	border: none;
+	margin-top: 0px;
+	cursor: pointer;
+	text-transform: uppercase;
+	letter-spacing: 4px;
+	box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+	transition: 1s all;
+	font-size: 10px;
+	border-radius: 5px;
+}
+</style>
